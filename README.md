@@ -27,7 +27,7 @@ This workflow requires to have permissions in order to operate on other reposito
 | inputs          | description                                 | required | default              |
 | --------------- | ------------------------------------------  | -------- | -------------------- |
 | labels.yml      | Label configuration (desc, color, text)     | true     | `.github/labels.yml` |
-| repositories    | repositories list (e.g goat-community/goat) | true     |                      |
+| repositories    | repositories list (e.g plan4better/goat) | true     |                      |
 
 #### Example Usage
 
@@ -52,7 +52,7 @@ jobs:
         with:
             manifest: .github/labels.yml
             repository: |
-                goat-community/goat
+                plan4better/goat
             token: ${{ secrets.PAT }}
 
 ```
@@ -86,7 +86,7 @@ on:
 jobs:
   label-on-pr:
     name: pr-apply-label
-    uses: "goat-community/.github/.github/workflows/pr-apply-issue-labels.yml@main"
+    uses: "plan4better/.github/.github/workflows/pr-apply-issue-labels.yml@main"
     permissions:
       contents: none
       issues: read

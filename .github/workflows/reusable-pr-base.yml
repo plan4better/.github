@@ -7,7 +7,7 @@ jobs:
   apply-issue-labels-on-pr:
     if: ${{ github.event_name == 'pull_request_target' && github.event.action == 'opened' }}
     name: apply-issue-labels-on-pr
-    uses: "goat-community/.github/.github/workflows/pr-apply-issue-labels.yml@main"
+    uses: "plan4better/.github/.github/workflows/pr-apply-issue-labels.yml@main"
     permissions:
       contents: none
       issues: read
@@ -17,7 +17,7 @@ jobs:
   semantic-pr:
     if: ${{ github.event_name == 'pull_request_target' && contains(fromJson('["opened", "reopened", "edited", "synchronize"]'), github.event.action) }}
     name: semantic-pr
-    uses: "goat-community/.github/.github/workflows/semantic-pr.yml@main"
+    uses: "plan4better/.github/.github/workflows/semantic-pr.yml@main"
     permissions:
       contents: none
       issues: read
@@ -27,7 +27,7 @@ jobs:
   clean-pr-cache:
     if: ${{ github.event_name == 'pull_request' && github.event.action == 'closed' }}
     name: clean-pr-cache
-    uses: "goat-community/.github/.github/workflows/pr-cache-clean.yml@main"
+    uses: "plan4better/.github/.github/workflows/pr-cache-clean.yml@main"
     permissions:
       contents: none
       issues: read
@@ -37,7 +37,7 @@ jobs:
   welcome-new-contributors:
     if: ${{ github.event_name == 'pull_request_target' && github.event.action == 'opened' }}
     name: welcome-new-contributors
-    uses: "goat-community/.github/.github/workflows/welcome-new-contributors.yml@main"
+    uses: "plan4better/.github/.github/workflows/welcome-new-contributors.yml@main"
     permissions:
       contents: none
       issues: read

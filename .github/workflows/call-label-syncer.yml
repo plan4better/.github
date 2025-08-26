@@ -17,12 +17,12 @@ jobs:
         with:
             manifest: .github/labels.yml
             repository: |
-                goat-community/goat
-                goat-community/infra
-                goat-community/goat-accounts
-                goat-community/goat-gepapi
-                goat-community/goat-core
-                goat-community/goat-docs
-                goat-community/goat-frontend
-                goat-community/ums
+                plan4better/goat
+                plan4better/infra
+                plan4better/goat-accounts
+                plan4better/goat-gepapi
+                plan4better/goat-core
+                plan4better/goat-docs
+                plan4better/goat-frontend
+                plan4better/ums
             token: ${{ secrets.PAT }}

@@ -1,6 +1,6 @@
 <!-- PROJECT LOGO -->
 <p align="center">
-  <a href="https://github.com/goat-community">
+  <a href="https://github.com/plan4better">
    <img src="https://assets.plan4better.de/img/logo/plan4better_standard.png" alt="Logo">
   </a>
 
@@ -19,9 +19,9 @@
     <br />
     <a href="https://plan4better.de/en/blog">Blog</a>
     ·
-    <a href="https://github.com/goat-community/goat/issues">Issues</a>
+    <a href="https://github.com/plan4better/goat/issues">Issues</a>
     ·
-    <a href="https://github.com/goat-community/goat/milestones">Roadmap</a>
+    <a href="https://github.com/plan4better/goat/milestones">Roadmap</a>
     ·
     <a href="https://discord.gg/WuWs9A5t">Discord</a>
 
