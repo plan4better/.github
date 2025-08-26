@@ -44,11 +44,12 @@ runs:
       shell: bash
       working-directory: ${{ inputs.cwd }}
       run: |
+        npm install -g corepack@latest
         corepack enable
         echo "corepack enabled" 
 
     - name: Setup pnpm
-      uses: pnpm/action-setup@v2.2.4
+      uses: pnpm/action-setup@v4.1.0
       if: ${{ inputs.enable-corepack == 'false' }}
       with:
         run_install: false
@@ -68,7 +69,7 @@ runs:
         echo "YEAR_MONTH=$(/bin/date -u "+%Y%m")" >> $GITHUB_OUTPUT
 
     - name: Setup pnpm cache
-      uses: actions/cache@v3
+      uses: actions/cache@v4
       with:
         path: ${{ steps.pnpm-config.outputs.STORE_PATH }}
         key: ${{ runner.os }}-pnpm-store-cache-${{ steps.cache-rotation.outputs.YEAR_MONTH }}-${{ hashFiles('${{ inputs.cwd }}/pnpm-lock.yaml') }}

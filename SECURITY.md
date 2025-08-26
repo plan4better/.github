@@ -1,12 +1,12 @@
 # Security Policy
-At Plan4Better, we take security seriously. We strive to ensure that our code is secure and that our users' data is protected. If you believe you've found a security issue in our code or have concerns about the security of our products, please do not hesitate to contact us at security@plan4better.de.
+At Plan4Better, we take security seriously. We strive to ensure that our code is secure and that our users' data is protected. If you believe you've found a security issue in our code or have concerns about the security of our products, please do not hesitate to contact us at info@plan4better.de.
 
 ## Supported Versions
 Our team will provide support and investigate security vulnerabilities for the latest release on GitHub. Minor releases may be considered for investigation on a case-by-case basis.
 
 ## Reporting a Vulnerability
 
-If you have discovered a vulnerability, please report it to us as soon as possible so that we can work to address it. To report a security issue or vulnerability, please email us at security@plan4better.de with the following information:
+If you have discovered a vulnerability, please report it to us as soon as possible so that we can work to address it. To report a security issue or vulnerability, please email us at info@plan4better.de with the following information:
 
 - A brief description of the potential vulnerability
 - Steps to reproduce the vulnerability
