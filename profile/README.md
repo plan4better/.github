@@ -15,13 +15,15 @@
   
   </p>
   <p align="center">
-    <a href="https://plan4better.de" target="_blank" rel="noopener noreferrer"><strong>Learn more »</strong></a>
+    <a href="https://plan4better.de"><strong>Learn more »</strong></a>
     <br />
-    <a href="https://plan4better.de/en/blog" target="_blank" rel="noopener noreferrer">Blog</a>
+    <a href="https://plan4better.de/blog">Blog</a>
     ·
-    <a href="https://github.com/goat-community/goat/issues" target="_blank" rel="noopener noreferrer">Issues</a>
+    <a href="https://plan4better.de/references">References</a>
     ·
-    <a href="https://github.com/goat-community/goat/milestones" target="_blank" rel="noopener noreferrer">Roadmap</a>
+    <a href="https://github.com/goat-community/goat/issues">GOAT Issues</a>
+    ·
+    <a href="https://github.com/goat-community/goat/milestones" target="_blank" rel="noopener noreferrer">GOAT Roadmap</a>
 
   </p>
 </p>
