@@ -30,8 +30,7 @@ jobs:
     uses: "plan4better/.github/.github/workflows/pr-cache-clean.yml@main"
     permissions:
       contents: none
-      issues: read
-      pull-requests: write
+      actions: write
     secrets: inherit
 
   welcome-new-contributors:
