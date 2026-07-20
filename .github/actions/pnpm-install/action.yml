@@ -35,7 +35,7 @@ runs:
 
   steps:
     - name: Use Node ${{ inputs.node_version }}
-      uses: actions/setup-node@v3
+      uses: actions/setup-node@v4
       with:
         node-version: ${{ inputs.node_version }}
 
