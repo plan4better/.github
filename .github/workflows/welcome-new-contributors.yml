@@ -12,8 +12,8 @@ jobs:
     steps:
       - uses: actions/first-interaction@v3
         with:
-          repo-token: ${{ secrets.GITHUB_TOKEN }}
-          pr-message: |-
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          pr_message: |-
             Thank you for making your first Pull Request and taking the time to improve GOAT! 🎉
-          issue-message: |
-            Thank you for opening your first issue, one of our team members will review it as soon as it possible. ❤️🎉
+          issue_message: |
+            Thank you for opening your first issue, one of our team members will review it as soon as possible. ❤️🎉
