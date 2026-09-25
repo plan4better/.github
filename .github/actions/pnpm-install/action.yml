@@ -72,7 +72,10 @@ runs:
       uses: actions/cache@v4
       with:
         path: ${{ steps.pnpm-config.outputs.STORE_PATH }}
-        key: ${{ runner.os }}-pnpm-store-cache-${{ steps.cache-rotation.outputs.YEAR_MONTH }}-${{ hashFiles('${{ inputs.cwd }}/pnpm-lock.yaml') }}
+        # format(), not a nested ${{ }}: inside an expression that is a plain
+        # string, which matches no file, so the lockfile hash came out empty
+        # and the store was saved once a month and never refreshed.
+        key: ${{ runner.os }}-pnpm-store-cache-${{ steps.cache-rotation.outputs.YEAR_MONTH }}-${{ hashFiles(format('{0}/pnpm-lock.yaml', inputs.cwd)) }}
         restore-keys: |
           ${{ runner.os }}-pnpm-store-cache-${{ steps.cache-rotation.outputs.YEAR_MONTH }}-
 
