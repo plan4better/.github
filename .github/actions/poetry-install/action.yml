@@ -28,13 +28,14 @@ runs:
   using: "composite"
   steps:
     - name: Setup Python
-      uses: actions/setup-python@v5
+      id: setup-python
+      uses: actions/setup-python@v7
       with:
         python-version: ${{ inputs.python_version }}
 
     - name: Load cached Poetry installation
       id: cached-poetry
-      uses: actions/cache@v4
+      uses: actions/cache@v6
       with:
         path: ~/.local
         key: poetry-0
@@ -55,10 +56,13 @@ runs:
 
     - name: Load cached venv
       id: cached-poetry-dependencies
-      uses: actions/cache@v4
+      uses: actions/cache@v6
       with:
         path: .venv
-        key: venv-${{ runner.os }}-${{ steps.setup-python.outputs.python-version }}-${{ steps.cache-rotation.outputs.YEAR_MONTH }}-${{ hashFiles('${{ inputs.cwd }}/poetry.lock') }}
+        # format(), not a nested ${{ }}: that is a plain string inside an
+        # expression, matches no file and left the lockfile out of the key, so
+        # an exact hit skipped the install after poetry.lock changed.
+        key: venv-${{ runner.os }}-${{ steps.setup-python.outputs.python-version }}-${{ steps.cache-rotation.outputs.YEAR_MONTH }}-${{ hashFiles(format('{0}/poetry.lock', inputs.cwd)) }}
         restore-keys: |
           venv-${{ runner.os }}-${{ steps.setup-python.outputs.python-version }}-${{ steps.cache-rotation.outputs.YEAR_MONTH }}-
 
