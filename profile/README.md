@@ -17,7 +17,7 @@
   <p align="center">
     <a href="https://plan4better.de"><strong>Learn more »</strong></a>
     <br />
-    <a href="https://plan4better.de/blog">Blog</a>
+    <a href="https://plan4better.de/en/blog">Blog</a>
     ·
     <a href="https://plan4better.de/references">References</a>
     ·
