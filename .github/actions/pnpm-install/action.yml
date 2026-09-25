@@ -35,9 +35,12 @@ runs:
 
   steps:
     - name: Use Node ${{ inputs.node_version }}
-      uses: actions/setup-node@v4
+      uses: actions/setup-node@v7
       with:
         node-version: ${{ inputs.node_version }}
+        # pnpm is not installed yet at this point, and the store is cached
+        # below; keep setup-node from caching for a package manager itself.
+        package-manager-cache: false
 
     - name: ⚙️ Enable Corepack
       if: ${{ inputs.enable-corepack == 'true' }}
@@ -49,7 +52,7 @@ runs:
         echo "corepack enabled" 
 
     - name: Setup pnpm
-      uses: pnpm/action-setup@v4.1.0
+      uses: pnpm/action-setup@v6.1.0
       if: ${{ inputs.enable-corepack == 'false' }}
       with:
         run_install: false
@@ -69,7 +72,7 @@ runs:
         echo "YEAR_MONTH=$(/bin/date -u "+%Y%m")" >> $GITHUB_OUTPUT
 
     - name: Setup pnpm cache
-      uses: actions/cache@v4
+      uses: actions/cache@v6
       with:
         path: ${{ steps.pnpm-config.outputs.STORE_PATH }}
         # format(), not a nested ${{ }}: inside an expression that is a plain
